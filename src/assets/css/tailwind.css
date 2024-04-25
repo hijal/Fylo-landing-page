@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply block rounded-full cursor-pointer;
+  }
+
+  .btn--primary {
+    @apply text-white text-xs bg-cta font-raleway font-bold;
+  }
+
+  .btn--primary:hover {
+    @apply bg-none bg-[#8ADAE3];
+  }
+}
+
+@screen xsm {
+  .btn--primary {
+    @apply text-base;
+  }
+}
+
+@screen md {
+  .btn--primary {
+    @apply text-xl;
+  }
+}
+
+@screen lg {
+  .btn--primary {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .testimonial {
+    @apply flex flex-col basis-60 grow gap-y-4 relative px-5 pt-6 pb-[1.3125rem] bg-primary-400 font-open-sans rounded shadow-light;
+  }
+
+  .testimonial__text {
+    @apply text-xs leading-expanded;
+  }
+
+  .testimonial__footer {
+    @apply flex gap-x-2 items-center;
+  }
+
+  .testimonial__img {
+    @apply w-6 h-6 rounded-full;
+  }
+
+  .testimonial__name {
+    @apply font-bold text-xs leading-tighter tracking-[.5px] not-italic;
+  }
+
+  .testimonial__company {
+    @apply text-2xs leading-tight tracking-[.571px] not-italic;
+  }
+}
+
+@screen lg {
+  .testimonial {
+    @apply gap-y-6 pr-[1.54375rem] pl-[1.625rem] pt-10 pb-[1.625rem];
+  }
+
+  .testimonial__text {
+    @apply text-base leading-normal tracking-[.5px];
+  }
+}
+
+.cta-block {
+  @apply basis-[53.9375rem] grid gap-8 mx-2 pt-10 px-2 pb-[2.3125rem] bg-primary-300 rounded-lg shadow-dark;
+}
+
+@screen xsm {
+  .cta-block {
+    @apply mr-[1.1875rem] xsm:ml-5 xsm:px-7;
+  }
+}
+
+@screen lg {
+  .cta-block {
+    @apply gap-[2.375rem] pt-[2.625rem] px-[4.8125rem] pb-[2.5625rem];
+  }
+}
+
+.link--effect:hover {
+  text-shadow: 1px 0 #fff;
+}
